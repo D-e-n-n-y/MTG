@@ -1,0 +1,4 @@
+DB_NAME=group_prodject
+DB_USER=vlad_rud
+DB_PASSWORD=bvgb
+PORT=3000
