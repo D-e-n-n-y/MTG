@@ -2,14 +2,14 @@ const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const { User } = require('../db/models');
 
-router.route('/signin')
+router.route('/login')
   .get((req, res) => {
     const { error } = req.query;
     if (error) {
-      return res.render('signin', { mesage: '401' });
+      return res.render('login', { mesage: '401' });
     }
 
-    res.render('signin');
+    res.render('login');
   })
   .post(async (req, res) => {
     const { email, password } = req.body;
@@ -19,9 +19,9 @@ router.route('/signin')
         req.session.user = { id: currentUser.id, name: currentUser.name };
         return res.redirect('/');
       }
-      res.redirect('/user/signin?error=inputs');
+      res.redirect('/user/login?error=inputs');
     } else {
-      res.redirect('/user/signin');
+      res.redirect('/user/login');
     }
   })
 

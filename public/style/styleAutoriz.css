@@ -1,0 +1,50 @@
+.class-conteiner-Autoriz form {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 20em;
+}
+.class-conteiner-Autoriz span {
+  font-size: 3.5em;
+  color: aqua;
+  margin-left: 12em;
+  margin-right: 12em;
+  background-color: dimgray;
+  border-radius: 6px 6px 0 0;
+}
+.email-input {
+  margin-left: 37em;
+  margin-right: 37em;
+  background-color: dimgray;
+  border-radius: 6px 6px 0 0;
+}
+.email-input input {
+  margin-top: 0.5em;
+  font-size: 1.6em;
+  margin-bottom: 0.5em;
+}
+.fieldPassword {
+  margin-left: 37em;
+  margin-right: 37em;
+  background-color: dimgray;
+  border-radius: 0 0 6px 6px;
+}
+.fieldPassword input {
+  margin-top: 0.5em;
+  font-size: 1.6em;
+  margin-bottom: 0.5em;
+}
+.btnLogin {
+  margin-left: 43em;
+  margin-right: 43em;
+  background-color: dimgray;
+  border-radius: 0 0 6px 6px;
+}
+.btnLogin button {
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 6px;
+  background-color: magenta;
+  color: yellow;
+}

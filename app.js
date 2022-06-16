@@ -1,3 +1,4 @@
+
 require('dotenv').config();
 
 const express = require('express');
@@ -9,7 +10,7 @@ const path = require('path');
 // const FileStore = require('session-file-store')(session); //создаёт папку sessions для хранения наших сессий;
 
 const PORT = process.env.PORT ?? 3000; // ?? - оператор нулевого слияния, возвращает 3000 если значение слева null или undefined 
-// const indexRouter = require('./routes/indexRouter');
+const indexRouter = require('./routes/indexRouter');
 const userRouter = require('./routes/userRouter');
 // const postRouter = require('./routes/postRouter')
 
@@ -41,7 +42,7 @@ app.use(express.json());
 // next();
 // });
 
-// app.use('/', indexRouter);
+app.use('/', indexRouter);
 // app.use('/post', postRouter)
 app.use('/user', userRouter);
 // app.use('/user/create', postRouter);
@@ -53,3 +54,4 @@ res.status(404).send('ooops');
 app.listen(PORT, () => {
 console.log('server start on', PORT);
 });
+
