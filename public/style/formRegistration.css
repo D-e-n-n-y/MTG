@@ -1,0 +1,31 @@
+.formRegistration {
+  margin-top: 14em;
+  margin-left: 18em;
+  margin-right: 18em;
+  margin-bottom: 18em;
+  background: linear-gradient(to right, red, white, black, white, red);
+  height: 50em;
+  color: crimson;
+  border-radius: 30% 0 30% 0;
+}
+.formRegistration div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+  margin-bottom: 2.8em;
+}
+.formRegistration span {
+  font-size: 2em;
+}
+.formRegistration input {
+  font-size: 1.4em;
+}
+.formRegistration button {
+  font-size: 1.5em;
+  border-radius: 10px 0 10px 0;
+  background-color: crimson;
+  color: black;
+  margin-left: 7em;
+  margin-right: 7em;
+}
