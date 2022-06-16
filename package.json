@@ -1,7 +1,6 @@
 {
   "name": "project-customer",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,5 +24,14 @@
   },
   "devDependencies": {
     "sequelize-cli": "^6.4.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D-e-n-n-y/MTG.git"
+  },
+  "bugs": {
+    "url": "https://github.com/D-e-n-n-y/MTG/issues"
+  },
+  "homepage": "https://github.com/D-e-n-n-y/MTG#readme",
+  "description": ""
 }
