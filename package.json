@@ -1,7 +1,6 @@
 {
   "name": "project-customer",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,14 +9,10 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",
-    "bcrypt": "^5.0.1",
-    "cors": "^2.8.5",
     "dotenv": "^16.0.1",
-    "expres": "^0.0.5",
-    "git-ignore": "^0.0.2",
+    "express": "^4.18.1",
     "hbs": "^4.2.0",
     "morgan": "^1.10.0",
-    "node": "^17.7.2",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.20.1",
@@ -25,5 +20,15 @@
   },
   "devDependencies": {
     "sequelize-cli": "^6.4.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D-e-n-n-y/MTG.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/D-e-n-n-y/MTG/issues"
+  },
+  "homepage": "https://github.com/D-e-n-n-y/MTG#readme",
+  "description": ""
 }
