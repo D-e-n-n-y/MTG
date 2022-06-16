@@ -1,11 +1,11 @@
-const { Post } = require('../db/models');
+const { Products } = require('../db/models');
 const router = require('express').Router();
 
 router.route('/')
   .get(async (req, res) => {
-    // const postsOrigin = await Post.findAll({ order: [['createdAt', 'DESC']], raw: true });
-    // const posts = postsOrigin.map((el) => ({ ...el, owner:  req.session.user?.userId === 1})); 
-    res.render('mainPage');
+    const postsOrigin = await Products.findAll({ order: [['createdAt', 'DESC']], raw: true });
+    const cards = postsOrigin.map((el) => ({ ...el, owner:  req.session.user?.creator_id === req.session.user?.id })); 
+    res.render('mainPage', {cards});
   });
 
 
