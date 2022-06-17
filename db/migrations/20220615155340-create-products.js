@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       img: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       condition: {
         type: Sequelize.STRING

@@ -1,10 +1,12 @@
 <ul>
-  <li style="float: left"><button id="entBtn">Вход</button></li>
-  <li style="float: left"><button id="regBtn">Регистрация</button></li>
-  <li>
-    <label for=""><input type="text" placeholder="Город" /></label>
-  </li>
-
+  {{#if user}}
+  <li style="float: left"><a class="nav-link" href="/user/logout"><button type="submit" id="regBtn">Выйти</button></a></li>
+  <li style="float: left"><a class="nav-link" href="/user/create"><button type="submit" id="regBtn">Добавить карточку</button></a></li>
+  <li style="float: left"><a class="nav-link" href="/user/LK"><button type="submit" id="regBtn">Личный Кабинет</button></a></li>
+  {{else}}
+  <li style="float: left"><a class="nav-link" href="/user/login"><button type="submit"  id="entBtn">Вход</button></a></li>
+  <li style="float: left"><a class="nav-link" href="/user/signup"><button type="submit" id="regBtn">Регистрация</button></a></li>
+{{/if}}
   <li style="float: right" class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Город</a>
     <div class="dropdown-content">
@@ -20,64 +22,25 @@
       <a href="#">Цюрих</a>
     </div>
   </li>
+  {{#if user}}
   <li id="btnBasket" style="float: right"><button>Корзина</button></li>
+  {{/if}}
 </ul>
-<div id="searchCard">
+{{!-- <div id="searchCard">
   <input type="text" placeholder="Search card" /><button>Search</button>
-</div>
+</div> --}}
+<div id="wrapperabc" class="row postWrapper">
+{{#each cards}}
 <div id="blockImage">
-  <div class="imagePic">
-    <p>Warlock</p>
-    <img src="" alt="pic1" />
+  <div data-id="{{this.id}}" class="imagePic">
+    <p class="card-title">{{this.title}}</p>
+    <img src="/img/{{this.img}}" alt="..." />
     <div class="buyPrice">
       <button>buy</button>
       <p1>rate:</p1>
       <p1>$4.99</p1>
     </div>
   </div>
-  <div class="imagePic">
-    <p>Demon</p>
-    <img src="" alt="pic2" />
-    <div class="buyPrice">
-      <button>buy</button>
-      <p1>rate:</p1>
-      <p1>$4.99</p1>
-    </div>
-  </div>
-  <div class="imagePic">
-    <p>Elf</p>
-    <img src="" alt="pic3" />
-    <div class="buyPrice">
-      <button>buy</button>
-      <p1>rate:</p1>
-      <p1>$4.99</p1>
-    </div>
-  </div>
-  <div class="imagePic">
-    <p>Lancelot</p>
-    <img src="" alt="pic4" />
-    <div class="buyPrice">
-      <button>buy</button>
-      <p1>rate:</p1>
-      <p1>$4.99</p1>
-    </div>
-  </div>
-  <div class="imagePic">
-    <p>Druid</p>
-    <img src="" alt="pic5" />
-    <div class="buyPrice">
-      <button>buy</button>
-      <p1>rate:</p1>
-      <p1>$4.99</p1>
-    </div>
-  </div>
-  <div class="imagePic">
-    <p>Dwarf</p>
-    <img src="" alt="pic6" />
-    <div class="buyPrice">
-      <button>buy</button>
-      <p1>rate:</p1>
-      <p1>$4.99</p1>
-    </div>
-  </div>
+{{/each}}
+</div>
 </div>
