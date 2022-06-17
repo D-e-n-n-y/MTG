@@ -10,9 +10,12 @@
   </div>
 </div>
 <div class="interfaceLK">
-   <div class="col">
+   {{#if user}}
+<div class="row">
+    <div class="col">
         {{> postForm}}
     </div>
 </div>
+{{/if}}
+</div>
 </form>
-<script defer src="/js/index.js"></script>

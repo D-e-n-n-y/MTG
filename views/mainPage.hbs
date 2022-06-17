@@ -1,7 +1,7 @@
+
 <ul>
   {{#if user}}
   <li style="float: left"><a class="nav-link" href="/user/logout"><button type="submit" id="regBtn">Выйти</button></a></li>
-  <li style="float: left"><a class="nav-link" href="/user/create"><button type="submit" id="regBtn">Добавить карточку</button></a></li>
   <li style="float: left"><a class="nav-link" href="/user/LK"><button type="submit" id="regBtn">Личный Кабинет</button></a></li>
   {{else}}
   <li style="float: left"><a class="nav-link" href="/user/login"><button type="submit"  id="entBtn">Вход</button></a></li>
@@ -34,9 +34,10 @@
 <div id="blockImage">
   <div data-id="{{this.id}}" class="imagePic">
     <p class="card-title">{{this.title}}</p>
-    <img src="/img/{{this.img}}" alt="..." />
+    <img src="/img/{{this.img}}" class="card-img-top" alt="...">
     <div class="buyPrice">
-      <button>buy</button>
+      <button type="submit">buy</button>
+      <button id="del-post" type="button">Delete</button>
       <p1>rate:</p1>
       <p1>$4.99</p1>
     </div>
