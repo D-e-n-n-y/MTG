@@ -23,25 +23,6 @@
     </div>
   </li>
   {{#if user}}
-  <li id="btnBasket" style="float: right"><a class="nav-link" href="/user/basket"><button type="submit">Корзина</button></a></li>
+  <li id="btnBasket" style="float: right"><button>Корзина</button></li>
   {{/if}}
 </ul>
-{{!-- <div id="searchCard">
-  <input type="text" placeholder="Search card" /><button>Search</button>
-</div> --}}
-<div id="wrapperabc" class="row postWrapper">
-{{#each cards}}
-<div id="blockImage">
-  <div data-id="{{this.id}}" class="imagePic">
-    <p class="card-title">{{this.title}}</p>
-    <img src="/img/{{this.img}}" alt="...">
-    <div class="buyPrice">
-      <button type="submit">buy</button>
-      <button id="del-post" type="button">Delete</button>
-      <p1>rate:</p1>
-      <p1>$4.99</p1>
-    </div>
-  </div>
-{{/each}}
-</div>
-</div>

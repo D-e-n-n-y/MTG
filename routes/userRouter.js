@@ -58,7 +58,7 @@ router.route('/logout')
     res.clearCookie('sid').redirect('/');
   });
 
-router.route('/LK')
+  router.route('/LK')
   .get((req, res) => {
     const { error } = req.query;
     if (error) {
@@ -67,6 +67,18 @@ router.route('/LK')
 
     res.render('LK');
   })
+
+
+  router.route('/basket')
+  .get((req, res) => {
+    const { error } = req.query;
+    if (error) {
+      return res.render('Basket', { mesage: '401' });
+    }
+
+    res.render('Basket');
+  })
+
 
 
 module.exports = router;

@@ -1,4 +1,4 @@
-<form action="/user/LK" method="post" id="login">
+<form name="postForm" enctype="multipart/form-data" action="/user/LK" method="post" id="login">
 <div class="dropdownLK">
   <button class="dropbtnLK">M</button>
   <div class="dropdown-contentLK">
@@ -10,9 +10,14 @@
   </div>
 </div>
 <div class="interfaceLK">
-   <div class="col">
-        {{> postForm}}
+  <div>
+    <span>Наименование карточки</span><input type="text" id="title" name="title">
+  
+    <div id="cardFromSale">
+    <span>Состояние</span><input type="text" id="condition" name="condition">
+    <span>Фотокарточка</span><input type="file" id="img" name="img">
     </div>
+  </div>
+  <div><span>Добавить на продажу</span><button type="submit">Push</button></div>
 </div>
 </form>
-<script defer src="/js/index.js"></script>
