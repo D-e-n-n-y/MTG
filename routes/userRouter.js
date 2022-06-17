@@ -38,6 +38,7 @@ router.route('/signup')
   
   .post(async (req, res) => {
     const { name, password, email, city} = req.body;
+    console.log(name, password, email, city);
     if (name && password && email && city) {
       const secretPass = await bcrypt.hash(password, Number(process.env.ROUNDS));
       try {
@@ -57,6 +58,15 @@ router.route('/logout')
     res.clearCookie('sid').redirect('/');
   });
 
+router.route('/LK')
+  .get((req, res) => {
+    const { error } = req.query;
+    if (error) {
+      return res.render('LK', { mesage: '401' });
+    }
+
+    res.render('LK');
+  })
 
 
 module.exports = router;

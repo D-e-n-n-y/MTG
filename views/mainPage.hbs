@@ -2,6 +2,7 @@
   {{#if user}}
   <li style="float: left"><a class="nav-link" href="/user/logout"><button type="submit" id="regBtn">Выйти</button></a></li>
   <li style="float: left"><a class="nav-link" href="/user/create"><button type="submit" id="regBtn">Добавить карточку</button></a></li>
+  <li style="float: left"><a class="nav-link" href="/user/LK"><button type="submit" id="regBtn">Личный Кабинет</button></a></li>
   {{else}}
   <li style="float: left"><a class="nav-link" href="/user/login"><button type="submit"  id="entBtn">Вход</button></a></li>
   <li style="float: left"><a class="nav-link" href="/user/signup"><button type="submit" id="regBtn">Регистрация</button></a></li>
@@ -28,7 +29,7 @@
 {{!-- <div id="searchCard">
   <input type="text" placeholder="Search card" /><button>Search</button>
 </div> --}}
-
+<div id="wrapperabc" class="row postWrapper">
 {{#each cards}}
 <div id="blockImage">
   <div data-id="{{this.id}}" class="imagePic">
@@ -41,4 +42,5 @@
     </div>
   </div>
 {{/each}}
+</div>
 </div>

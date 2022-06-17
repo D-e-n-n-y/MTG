@@ -1,24 +1,22 @@
-
 <div id="registration" align="center" style="font-size: 24px">Registration</div>
-<form action="/user/signup" method="post" id="register" class="g-3 needs-validation" align="center" style="margin-top: 100px" novalidate>
-  <div class="col-md-4" style="margin-left: auto; margin-right: auto;">
-    <label for="validationCustom01" class="form-label">Name</label>
-    <input name="name" type="text" class="form-control" id="validationCustom01">
-  </div><br>
-  <div class="col-md-4" style="margin-left: auto; margin-right: auto;">
-    <label for="validationCustom02" class="form-label">E-mail</label>
-    <input name="email" type="text" class="form-control" id="validationCustom02">
-  </div><br>
-  <div class="col-md-4" style="margin-left: auto; margin-right: auto;">
-    <label for="validationCustom02" class="form-label">Password</label>
-    <input name="password" type="password" class="form-control" id="validationCustom03">
-  </div><br>
-   <div class="col-md-4" style="margin-left: auto; margin-right: auto;">
-    <label for="validationCustom02" class="form-label">City</label>
-    <input name="city" type="text" class="form-control" id="validationCustom03">
-  </div><br>
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">Register User</button>
-  </div><br>
-  <div id="message"></div>
+<form action="/user/signup" method="post" id="register" class="formRegistration">
+  <div>
+    <span> name</span>
+    <input name="name" type="text" placeholder="enter your name" />
+  </div>
+     <div>
+    <span> password </span>
+    <input name="password" type="password" placeholder="enter password" />
+  </div>
+  <div>
+    <span> email </span>
+    <input name="email" type="text" placeholder="enter youe email" />
+  </div>
+  <div>
+    <span> city </span>
+    <input name="city" type="text" placeholder="enter your city" />
+  </div>
+  <div>
+    <button type="submit" class="btn btn-primary">Registration</button>
+  </div>
 </form>
