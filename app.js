@@ -13,6 +13,7 @@ const PORT = process.env.PORT ?? 3000;
 const indexRouter = require('./routes/indexRouter');
 const userRouter = require('./routes/userRouter');
 const postRouter = require('./routes/postRouter')
+const funcRouter = require('./routes/funcRouter')
 
 const app = express();
 hbs.registerPartials(path.join(process.env.PWD, 'views/partials'));
@@ -43,9 +44,10 @@ next();
 });
 
 app.use('/', indexRouter);
-// app.use('/post', postRouter)
+app.use('/post', postRouter)
 app.use('/user', userRouter);
-app.use('/user/LK', postRouter);
+app.use('/LK', userRouter);
+app.use('/user/basket', userRouter)
 
 app.use((req, res) => {  
 res.status(404).send('ooops');

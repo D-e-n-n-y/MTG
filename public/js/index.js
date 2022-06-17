@@ -21,9 +21,6 @@ function newPost(post) {
   }
 
 
-
-
-
   postForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (e.target.name === 'postForm') {
